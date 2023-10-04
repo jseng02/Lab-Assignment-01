@@ -1,0 +1,55 @@
+<%#/*
+ main_nav.ejs
+ Justin Seng
+ 301319383 
+ October 04, 2023
+*/%> 
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <img src="/img/logo.png" alt="logo" style="width: 150px; height: 100px">
+        <a class="navbar-brand" href="#">COMP229</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto"> <!-- Changed class to ml-auto for right alignment -->
+                <% if (title=="Home"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/"><i class="fas fa-lg fa-laptop-house"></i>Home</a>
+                </li>
+                <% if (title=="About Me"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/about"><i class="fa-solid fa-address-card"></i>About Me</a>
+                </li>
+                <% if (title=="Contacts"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/contact"><i class="fa-solid fa-address-book"></i>Contact</a>
+                </li>
+                <% if (title=="Projects"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/Projects"><i class="fa-brands fa-product-hunt"></i>Projects</a>
+                </li>
+                <% if (title=="Services"){%>
+                <li class="nav-item active">
+                <%}else{%>
+                <li class="nav-item">
+                <%}%>
+                <a class="nav-link" href="/services"><i class="fa-brands fa-servicestack"></i>Services</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
